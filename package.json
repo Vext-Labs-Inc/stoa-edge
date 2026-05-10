@@ -1,0 +1,25 @@
+{
+  "name": "stoa-edge",
+  "version": "0.1.0",
+  "description": "Stoa Edge — reference runtime for the Stoa/1 open agent substrate (Apache-2.0)",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.5.0",
+    "@cloudflare/workers-types": "^4.20240529.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0",
+    "wrangler": "^3.57.0"
+  },
+  "dependencies": {
+    "jose": "^5.3.0",
+    "zod": "^3.23.8"
+  },
+  "license": "Apache-2.0"
+}

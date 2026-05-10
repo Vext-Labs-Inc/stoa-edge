@@ -1,0 +1,25 @@
+name = "stoa-edge"
+main = "src/index.ts"
+compatibility_date = "2024-05-29"
+compatibility_flags = ["nodejs_compat"]
+
+[[durable_objects.bindings]]
+name = "SAGA_DO"
+class_name = "SagaDO"
+
+[[durable_objects.bindings]]
+name = "BUDGET_DO"
+class_name = "BudgetDO"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["SagaDO", "BudgetDO"]
+
+[vars]
+STOA_VERSION = "1"
+RUNTIME_VERSION = "0.1.0"
+# RECEIPT_PRIVATE_KEY_JWK = set in .dev.vars for local dev, Wrangler secret for prod
+# RECEIPT_PUBLIC_KEY_JWK  = set in .dev.vars for local dev, Wrangler secret for prod
+
+[dev]
+port = 8787
